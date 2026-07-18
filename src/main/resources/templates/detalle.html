@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Detalle</title>
+    </head>
+    <body>
+
+        <h1>Detalle de Receta</h1>
+        <h2 th:text="${receta.nombre}"></h2>
+        <p th:text="${receta.categoria}"></p>
+        <p th:text="${receta.tiempo}"></p>
+    </body>
+</html>

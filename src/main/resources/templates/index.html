@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+    </head>
+    <body>
+        <h2 th:text="${proyecto}"></h2>
+        <form action="/filtrar" method="get">
+            <label>Categoría:</label>
+            <input type="text" name="categoria">
+
+            <button type="submit">Buscar</button>
+        </form>
+        <a href="/Agregar">Agregar Receta</a>
+
+        <div th:each="receta : ${recetas}">
+            <h2 style="font-weight: bold">Receta:</h2>
+            <h2 th:text="${receta.nombre}"></h2>
+            <p style="font-weight: bold">Categoria:</p>
+            <p th:text="${receta.categoria}"></p>
+            <p style="font-weight: bold">Tiempo:</p>
+            <p th:text="${receta.tiempo}"></p>
+        </div>
+    </body>
+</html>

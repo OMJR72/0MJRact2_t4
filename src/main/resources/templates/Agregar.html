@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Agregar</title>
+    </head>
+    <body>
+        <h1>Añadir</h1>
+        <form th:action="@{/guardar}" th:object="${receta}" method="post">
+            <label>Nombre:</label>
+            <input type="text" th:field="*{nombre}">
+
+            <label>Categoría:</label>
+            <input type="text" th:field="*{categoria}">
+
+            <label>Tiempo:</label>
+            <input type="text" th:field="*{tiempo}">
+
+            <button a href="/index" type="submit">Guardar</button>
+
+        </form>
+    </body>
+</html>

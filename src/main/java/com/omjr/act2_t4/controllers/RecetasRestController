@@ -1,0 +1,14 @@
+package com.omjr.act2_t4.controllers;
+
+import com.omjr.act2_t4.models.dto.RecetaDTO;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/api/recetas")
+public class RecetasRestController {
+
+    @PostMapping
+    public RecetaDTO crearReceta(@RequestBody RecetaDTO receta) {
+        return receta;
+    }
+}
